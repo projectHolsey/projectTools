@@ -1,0 +1,12 @@
+To build files, run the command
+
+make <name of file>
+
+make MessingWitharrays
+
+
+Then to run the program, type
+
+./<program_to_run>
+
+./MessingWitharrays

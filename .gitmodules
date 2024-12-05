@@ -1,0 +1,3 @@
+[submodule "apps/dockerTutorial"]
+	path = apps/dockerTutorial
+	url = git@github.com:projectHolsey/dockerTutorial.git

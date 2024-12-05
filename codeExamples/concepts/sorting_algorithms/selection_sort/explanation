@@ -1,0 +1,29 @@
+The algorithm repeatedly selects the smallest (or largest) 
+element from the unsorted portion of the list and swaps
+ it with the first element of the unsorted part. 
+ This process is repeated for the remaining unsorted 
+ portion until the entire list is sorted. 
+
+
+Examples from here:
+https://www.geeksforgeeks.org/selection-sort/
+
+Difference between this and bubble is this does not swap every item everytime. Just the next highest / lowest
+
+So for exmaple
+
+
+[2, 45, 34, 23, 1] <-- Orignal array
+
+[1, 45, 34, 23, 2] <-- swap '1' and '2'
+[1, 2, 34, 23, 45] <-- swap '2' and '45'
+[1, 2, 23, 34, 45] <-- swap '23' and '34'
+[1, 2, 23, 34, 45] <-- swap nothing (looking at ele 4)
+[1, 2, 23, 34, 45] <-- swap nothing (looking at ele 5)
+Sorted array
+1 , 2 , 23 , 34 , 45
+
+
+One loop to select an element of Array one by one = O(N)
+Another loop to compare that element with every other Array element = O(N)
+Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N2)

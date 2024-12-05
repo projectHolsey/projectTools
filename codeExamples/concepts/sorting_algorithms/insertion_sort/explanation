@@ -1,0 +1,11 @@
+This is very similar to how you sort cards in your hand.
+
+Imagine you have 2 sections, a sorted and unsorted section.
+
+For each item in the unsorted section, you look if the next value is hihger or lower than those in the sorted section and place it appropriately.
+
+[11, 12, 13, 5, 6] <-- initial array
+[11, 12, 13, 5, 6]
+
+[5, 11, 12, 13, 6]
+[5, 6, 11, 12, 13]

@@ -1,0 +1,61 @@
+Sliding window problems are problems that use 2 pointers (left and right) to create a window.
+
+The three key steps are:
+
+- Expand the window
+- Meet the condition and process window
+- Contract the window
+
+
+An overview looks like this
+
+# Iterate over elements in the input
+	# Expand the window
+	# Meet the condition to stop expansion
+		# Process the window
+		# Contract the window
+
+
+Example problem and solution:
+
+Problem:
+
+MAX CONSECUTIVE ONES II Given a binary array, 
+find the maximum number of consecutive 1s in this array 
+if you can flip at most one 0.
+
+Input: [1,0,1,1,0]
+Output: 4
+
+
+#Contidion to stop expansion : count of zeros == 2
+
+Solution:
+
+def sliding_window(nums):    
+	left, right = 0, 0        # Intialize our window's bound
+	count_of_zeroes = 0       # Track how many 0’s are in the window    
+	global_max = 0		  # Track the maximum overall
+
+	# Iterate over elements in our input
+	while right < len(nums):        
+
+		# Expand the window
+		if nums[right] == 0:
+			count_of_zeroes += 1
+			        
+		# Meet the condition to stop expansion
+		while count_of_zeroes == 2:            
+			# Process the current window
+			global_max = max(global_max, right - left)
+   
+            		# Contract the window
+			if nums[left] == 0:
+				count_of_zeroes -= 1
+			left += 1
+        
+		right += 1            
+
+		if count_of_zeroes < 2:
+			global_max = max(global_max, right-left)    
+		return global_max

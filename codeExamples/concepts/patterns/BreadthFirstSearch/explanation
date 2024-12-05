@@ -1,0 +1,30 @@
+This is a way to traverse a graph
+
+In breadth first, you traverse horizontally before traversing vertically.
+
+For this, typically, you use a queue to push and pop the 'visited' nodes of the graph.
+
+Example.
+
+            1
+           / \
+          2   3
+         /   / \
+        4   6   5
+       /   / \   \
+      7   9   8   10
+
+The order you would traverse is as follows.
+
+1       <-- Gives you nodes 2 & 3 to visit next
+2       <-- Add node 4 to the queue
+3       <-- Adds nodes 5 and 6 to the queue
+4
+6       <-- 6 is the next horizontal node to visit, not 5
+5
+7
+9       <-- Same here, 9 is first, not 8
+8
+10
+
+Once here, you'll have mapped the entire tree.

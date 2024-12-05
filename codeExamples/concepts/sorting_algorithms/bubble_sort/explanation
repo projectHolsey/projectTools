@@ -1,0 +1,30 @@
+Simple sorting algorithm
+
+consistently traverse over the array, each time swapping the
+items parallel to one another to move the biggest to the rhs, smallest to the lhs
+
+Meta code would look something like this:
+
+
+bubbleSort(array)
+  for i <- 1 to indexOfLastUnsortedElement-1
+    if leftElement > rightElement
+      swap leftElement and rightElement
+end bubbleSort
+
+
+
+There's a more efficient version of this algorithm.
+The one above will iterate len(array) times.
+If there's no swaps that are done, then we know that every item has been sorted
+And there's no longer a need to iterate the array
+
+Optimised algorithm looks like the below:
+
+bubbleSort(array)
+  swapped <- false
+  for i <- 1 to indexOfLastUnsortedElement-1
+    if leftElement > rightElement
+      swap leftElement and rightElement
+      swapped <- true
+end bubbleSort

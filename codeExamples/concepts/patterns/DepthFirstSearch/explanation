@@ -1,0 +1,28 @@
+Another way to traverse a graph
+
+Depth first is going to check each left node first.
+if there's no left node, it'll traverse the last added right node
+
+Example.
+
+            1
+           / \
+          2   3
+         /   / \
+        4   6   5
+       /   / \   \
+      7   9   8   10
+
+The order this will be traversed is as follows:
+
+1  <-- start
+2  <-- go left first
+5
+7
+3  <-- nothing left to traverse on left, so go to last added right
+6
+9
+8
+5
+10
+
